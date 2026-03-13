@@ -1,3 +1,6 @@
+import Image from "next/image";
+
+
 export default function Hero() {
   return (
 
@@ -11,17 +14,19 @@ export default function Hero() {
             Agawam
           </h1>
 
-          <h1 className="text-3xl font-semibold text-amber-700 mt-2">
-            Pack and Ship
-          </h1>
+          <h2 className="text-6xl font-semibold text-amber-700 mt-2">
+            Pack & Ship
+          </h2>
         </div>
 
         {/* Right Image */}
         <div className="flex-shrink-0">
-          <img
+          <Image
             src="/frontOfStore.jpg"
             alt="Front of Store"
-            className="w-[420px] rounded-xl shadow-lg"
+            className="rounded-xl shadow-lg"
+            width={420}
+            height={420}
             />
         </div>
 
