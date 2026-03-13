@@ -29,18 +29,6 @@ export default function Hero() {
           </div>
         </div>
       </section>
-      <div className="w-screen overflow-hidden leading-none">
-        <svg
-          className="w-full h-24"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0,0V46.29c47.29,22,104.91,29,158,17C230.7,50.5,284,15,339,7.6c54.7-7.4,108.7,12.6,162,29.5C555,54,609,68,663,63.5c54-4.5,108-27.5,162-41.7C879,7.6,933,7.6,987,20.5c54,12.9,108,38.9,162,38.9V0Z"
-            fill="#bfdbfe"
-          ></path>
-        </svg>
-      </div>
       {/* CONTACT SECTION */}
       <section className="bg-white py-12 md:py-16">
         <div className="max-w-6xl mx-auto px-6">
