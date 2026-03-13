@@ -32,6 +32,80 @@ export default function Hero() {
 
       </div>
     </section>
+ <section className="bg-white py-16">
+  <div className="max-w-6xl mx-auto px-6">
+
+    <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+      Serving your Shipping and Business Needs
+    </h2>
+
+    <div className="grid md:grid-cols-3 gap-10 text-center">
+
+      {/* Phone */}
+      <div className="p-6 rounded-xl shadow-md bg-gray-50">
+        <h3 className="text-xl font-semibold mb-3">Phone</h3>
+        <p>
+          <a href="tel:14137891023" className="text-blue-600 hover:underline">
+            (413) 789-1023
+          </a>
+        </p>
+        <p className="mt-2 text-gray-600">
+          Fax: (413) 789-1549
+        </p>
+      </div>
+
+      {/* Email */}
+      <div className="p-6 rounded-xl shadow-md bg-gray-50">
+        <h3 className="text-xl font-semibold mb-3">Email</h3>
+        <a
+          href="mailto:info@agawampackandship.com"
+          className="text-blue-600 hover:underline"
+        >
+          info@agawampackandship.com
+        </a>
+      </div>
+
+      {/* Address */}
+      <div className="p-6 rounded-xl shadow-md bg-gray-50">
+        <h3 className="text-xl font-semibold mb-3">Address</h3>
+        <p>
+          417 Springfield Street <br />
+          Agawam, MA 01001-1513
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section className="bg-white py-16">
+  <div className="max-w-6xl mx-auto px-6">
+
+    <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
+      Find Us
+    </h2>
+
+    <div className="rounded-2xl overflow-hidden shadow-lg border">
+      <iframe
+        src="https://www.google.com/maps?q=417+Springfield+Street+Agawam+MA+01001&output=embed"
+        width="100%"
+        height="450"
+        loading="lazy"
+        className="w-full"
+      ></iframe>
+    </div>
+
+    <div className="text-center mt-6">
+      <a
+        href="https://www.google.com/maps?q=417+Springfield+Street+Agawam+MA+01001"
+        target="_blank"
+        className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition"
+      >
+        Get Directions
+      </a>
+    </div>
+
+  </div>
+</section>
   </> 
     
   );
