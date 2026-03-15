@@ -3,14 +3,11 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <>
-      {/* HERO SECTION */}
       <section className="relative w-full bg-gradient-to-br from-indigo-100 via-sky-100 to-blue-200 py-16 overflow-hidden">
-        {/* Decorative elements */}
         <div className="absolute top-0 left-0 w-40 h-40 bg-purple-300 rounded-full filter blur-3xl opacity-30 -translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute bottom-0 right-0 w-60 h-60 bg-amber-300 rounded-full filter blur-3xl opacity-30 translate-x-1/3 translate-y-1/3"></div>
 
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 md:px-8 gap-10 relative z-10">
-          {/* Left Text with decorative underline */}
           <div className="flex flex-col text-center md:text-left">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-800 to-purple-600 mb-2">
               Agawam
@@ -28,7 +25,6 @@ export default function Hero() {
             </p>
           </div>
 
-          {/* Right Image with decorative frame */}
           <div className="relative flex-shrink-0 group">
             <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-amber-600 rounded-xl blur opacity-25 group-hover:opacity-40 transition duration-300"></div>
             <div className="relative">
@@ -38,13 +34,13 @@ export default function Hero() {
                 className="rounded-xl shadow-2xl w-full max-w-sm md:max-w-md transform group-hover:scale-[1.02] transition duration-300"
                 width={420}
                 height={420}
+                draggable={false}
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* CONTACT SECTION */}
       <section className="bg-white py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
@@ -55,12 +51,9 @@ export default function Hero() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Phone Card */}
             <div className="group relative p-8 rounded-2xl shadow-lg bg-gradient-to-br from-gray-50 to-white hover:shadow-xl transition-all duration-500 ease-in-out cursor-pointer overflow-hidden">
-              {/* Fill overlay - starts from bottom left, expands to top right */}
               <div className="absolute inset-0 bg-purple-600 translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-500 ease-in-out"></div>
 
-              {/* Content (all with relative z-index to stay above overlay) */}
               <div className="relative z-10 transition-all duration-500 ease-in-out">
                 <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-500 transition-colors duration-500">
                   <svg
@@ -92,9 +85,7 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Email Card */}
             <div className="group relative p-8 rounded-2xl shadow-lg bg-gradient-to-br from-gray-50 to-white hover:shadow-xl transition-all duration-500 ease-in-out cursor-pointer overflow-hidden">
-              {/* Fill overlay - starts from bottom left, expands to top right */}
               <div className="absolute inset-0 bg-purple-600 translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-500 ease-in-out"></div>
 
               <div className="relative z-10 transition-all duration-500 ease-in-out">
@@ -125,9 +116,7 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Address Card */}
             <div className="group relative p-8 rounded-2xl shadow-lg bg-gradient-to-br from-gray-50 to-white hover:shadow-xl transition-all duration-500 ease-in-out cursor-pointer overflow-hidden">
-              {/* Fill overlay - starts from bottom left, expands to top right */}
               <div className="absolute inset-0 bg-purple-600 translate-x-[-100%] translate-y-[100%] group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-500 ease-in-out"></div>
 
               <div className="relative z-10 transition-all duration-500 ease-in-out">
@@ -168,7 +157,6 @@ export default function Hero() {
 
       <section className="bg-white py-12 md:py-16">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-8">
-          {/* LEFT: Google Map */}
           <div className="flex-1 rounded-2xl overflow-hidden shadow-lg border">
             <iframe
               src="https://www.google.com/maps?q=417+Springfield+Street+Agawam+MA+01001&output=embed"
@@ -179,9 +167,7 @@ export default function Hero() {
             ></iframe>
           </div>
 
-          {/* RIGHT: Store Hours + Pick-Up */}
           <div className="flex-1 flex flex-col gap-6">
-            {/* Store Hours Table */}
             <div className="bg-gray-50 p-6 rounded-2xl shadow-md">
               <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800">
                 Store Hours
@@ -220,7 +206,6 @@ export default function Hero() {
               </table>
             </div>
 
-            {/* Pick-Up Schedule Table */}
             <div className="bg-gray-50 p-6 rounded-2xl shadow-md">
               <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800">
                 Pick-up Schedule
@@ -249,7 +234,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Optional: Get Directions Button */}
         <div className="text-center mt-6">
           <a
             href="https://www.google.com/maps?q=417+Springfield+Street+Agawam+MA+01001"
@@ -259,6 +243,23 @@ export default function Hero() {
           >
             Get Directions
           </a>
+        </div>
+      </section>
+      <section className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+        <div className="bg-gray-800 text-white p-6 rounded-xl text-center shadow-md">
+          FedEx
+        </div>
+
+        <div className="bg-gray-800 text-white p-6 rounded-xl text-center shadow-md">
+          DHL
+        </div>
+
+        <div className="bg-gray-800 text-white p-6 rounded-xl text-center shadow-md">
+          USPS
+        </div>
+
+        <div className="bg-gray-800 text-white p-6 rounded-xl text-center shadow-md">
+          UPS
         </div>
       </section>
     </>
