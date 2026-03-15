@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import TrackTitle from "./components/scroll_effect";
+
 
 export default function Hero() {
   return (
@@ -157,25 +157,7 @@ export default function Hero() {
           </div>
         </div>
       </section>
-      <TrackTitle />
 
-      <section className="p-10 grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 max-w-4xl mx-auto">
-        <div className="bg-gray-800 text-white p-6 rounded-xl text-center shadow-md hover:scale-105 transition">
-          FedEx
-        </div>
-
-        <div className="bg-gray-800 text-white p-6 rounded-xl text-center shadow-md hover:scale-105 transition">
-          DHL
-        </div>
-
-        <div className="bg-gray-800 text-white p-6 rounded-xl text-center shadow-md hover:scale-105 transition">
-          USPS
-        </div>
-
-        <div className="bg-gray-800 text-white p-6 rounded-xl text-center shadow-md hover:scale-105 transition">
-          UPS
-        </div>
-      </section>
       <section className="bg-white py-12 md:py-16">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-8">
           <div className="flex-1 rounded-2xl overflow-hidden shadow-lg border">
@@ -267,7 +249,26 @@ export default function Hero() {
         </div>
       </section>
 
-      {/* <div className="text-center text-5xl">Track Your Packages</div> */}
+      <div className="text-center text-5xl">Track Your Packages</div>
+      <div className="absolute bottom-0 right-0 w-60 h-60 bg-amber-300 rounded-full filter blur-3xl opacity-30 translate-x-1/3 translate-y-1/3"></div>
+
+      <section className="p-10 grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 max-w-4xl mx-auto">
+        <div className="bg-gray-800 text-white p-6 rounded-xl text-center shadow-md hover:scale-105 transition">
+          FedEx
+        </div>
+
+        <div className="bg-gray-800 text-white p-6 rounded-xl text-center shadow-md hover:scale-105 transition">
+          DHL
+        </div>
+
+        <div className="bg-gray-800 text-white p-6 rounded-xl text-center shadow-md hover:scale-105 transition">
+          USPS
+        </div>
+
+        <div className="bg-gray-800 text-white p-6 rounded-xl text-center shadow-md hover:scale-105 transition">
+          UPS
+        </div>
+      </section>
     </>
   );
 }
