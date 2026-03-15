@@ -166,53 +166,99 @@ export default function Hero() {
         </div>
       </section>
 
-      {/* MAP SECTION */}
-      <section className="bg-gradient-to-b from-gray-50 to-white py-16 md:py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              Find Us
-            </h2>
-            <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full"></div>
-            <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-              Visit our store for all your shipping and packing needs
-            </p>
-          </div>
-
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
+      <section className="bg-white py-12 md:py-16">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-8">
+          {/* LEFT: Google Map */}
+          <div className="flex-1 rounded-2xl overflow-hidden shadow-lg border">
             <iframe
               src="https://www.google.com/maps?q=417+Springfield+Street+Agawam+MA+01001&output=embed"
               width="100%"
-              height="450"
+              height="400"
               loading="lazy"
-              className="w-full hover:opacity-95 transition-opacity"
-              title="Store Location Map"
+              className="w-full"
             ></iframe>
           </div>
 
-          <div className="text-center mt-8">
-            <a
-              href="https://www.google.com/maps?q=417+Springfield+Street+Agawam+MA+01001"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-xl shadow-lg hover:bg-blue-700 transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 font-medium text-lg group"
-            >
-              <span>Get Directions</span>
-              <svg
-                className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </a>
+          {/* RIGHT: Store Hours + Pick-Up */}
+          <div className="flex-1 flex flex-col gap-6">
+            {/* Store Hours Table */}
+            <div className="bg-gray-50 p-6 rounded-2xl shadow-md">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800">
+                Store Hours
+              </h2>
+              <table className="w-full text-left border-collapse text-gray-700">
+                <tbody>
+                  <tr>
+                    <td className="py-1 font-semibold">Monday</td>
+                    <td className="py-1 text-right">9 am - 6 pm</td>
+                  </tr>
+                  <tr>
+                    <td className="py-1 font-semibold">Tuesday</td>
+                    <td className="py-1 text-right">9 am - 6 pm</td>
+                  </tr>
+                  <tr>
+                    <td className="py-1 font-semibold">Wednesday</td>
+                    <td className="py-1 text-right">9 am - 6 pm</td>
+                  </tr>
+                  <tr>
+                    <td className="py-1 font-semibold">Thursday</td>
+                    <td className="py-1 text-right">9 am - 6 pm</td>
+                  </tr>
+                  <tr>
+                    <td className="py-1 font-semibold">Friday</td>
+                    <td className="py-1 text-right">9 am - 6 pm</td>
+                  </tr>
+                  <tr>
+                    <td className="py-1 font-semibold">Saturday</td>
+                    <td className="py-1 text-right">10 am - 2 pm</td>
+                  </tr>
+                  <tr>
+                    <td className="py-1 font-semibold">Sunday</td>
+                    <td className="py-1 text-right">CLOSED</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            {/* Pick-Up Schedule Table */}
+            <div className="bg-gray-50 p-6 rounded-2xl shadow-md">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800">
+                Pick-up Schedule
+              </h2>
+              <table className="w-full text-left border-collapse text-gray-700">
+                <tbody>
+                  <tr>
+                    <td className="py-1 font-semibold">DHL Express</td>
+                    <td className="py-1 text-right">2 pm</td>
+                  </tr>
+                  <tr>
+                    <td className="py-1 font-semibold">FedEx Ground</td>
+                    <td className="py-1 text-right">4 pm</td>
+                  </tr>
+                  <tr>
+                    <td className="py-1 font-semibold">FedEx Express</td>
+                    <td className="py-1 text-right">5 pm</td>
+                  </tr>
+                  <tr>
+                    <td className="py-1 font-semibold">UPS</td>
+                    <td className="py-1 text-right">5 pm</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
+        </div>
+
+        {/* Optional: Get Directions Button */}
+        <div className="text-center mt-6">
+          <a
+            href="https://www.google.com/maps?q=417+Springfield+Street+Agawam+MA+01001"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition"
+          >
+            Get Directions
+          </a>
         </div>
       </section>
     </>
