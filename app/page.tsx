@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 
-
 export default function Hero() {
   return (
     <>
@@ -249,26 +248,29 @@ export default function Hero() {
         </div>
       </section>
 
-      <div className="text-center text-5xl">Track Your Packages</div>
-      <div className="absolute bottom-0 right-0 w-60 h-60 bg-amber-300 rounded-full filter blur-3xl opacity-30 translate-x-1/3 translate-y-1/3"></div>
+      <div className="relative py-20 bg-gray-50 overflow-hidden">
+        {/* Heading */}
+        <h2 className="text-center text-5xl font-bold text-gray-900 mb-12">
+          Track Your Packages
+        </h2>
 
-      <section className="p-10 grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 max-w-4xl mx-auto">
-        <div className="bg-gray-800 text-white p-6 rounded-xl text-center shadow-md hover:scale-105 transition">
-          FedEx
-        </div>
+        {/* Subtle background blob */}
+        <div className="absolute -bottom-16 -right-16 w-64 h-64 bg-amber-200 rounded-full filter blur-3xl opacity-20"></div>
 
-        <div className="bg-gray-800 text-white p-6 rounded-xl text-center shadow-md hover:scale-105 transition">
-          DHL
-        </div>
-
-        <div className="bg-gray-800 text-white p-6 rounded-xl text-center shadow-md hover:scale-105 transition">
-          USPS
-        </div>
-
-        <div className="bg-gray-800 text-white p-6 rounded-xl text-center shadow-md hover:scale-105 transition">
-          UPS
-        </div>
-      </section>
+        {/* Package cards */}
+        <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          {["FedEx", "DHL", "US Postal Service", "UPS"].map((carrier) => (
+            <div
+              key={carrier}
+              className="bg-white p-6 rounded-xl text-center shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer"
+            >
+              <span className="text-lg font-medium text-gray-800">
+                {carrier}
+              </span>
+            </div>
+          ))}
+        </section>
+      </div>
     </>
   );
 }
