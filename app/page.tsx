@@ -245,20 +245,22 @@ export default function Hero() {
           </a>
         </div>
       </section>
-      <section className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-        <div className="bg-gray-800 text-white p-6 rounded-xl text-center shadow-md">
+      <div className="text-center text-5xl">Track Your Packages</div>
+
+      <section className="p-10 grid grid-cols-2 md:grid-cols-4 gap-4 mt-6 max-w-4xl mx-auto">
+        <div className="bg-gray-800 text-white p-6 rounded-xl text-center shadow-md hover:scale-105 transition">
           FedEx
         </div>
 
-        <div className="bg-gray-800 text-white p-6 rounded-xl text-center shadow-md">
+        <div className="bg-gray-800 text-white p-6 rounded-xl text-center shadow-md hover:scale-105 transition">
           DHL
         </div>
 
-        <div className="bg-gray-800 text-white p-6 rounded-xl text-center shadow-md">
+        <div className="bg-gray-800 text-white p-6 rounded-xl text-center shadow-md hover:scale-105 transition">
           USPS
         </div>
 
-        <div className="bg-gray-800 text-white p-6 rounded-xl text-center shadow-md">
+        <div className="bg-gray-800 text-white p-6 rounded-xl text-center shadow-md hover:scale-105 transition">
           UPS
         </div>
       </section>
