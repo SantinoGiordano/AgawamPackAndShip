@@ -156,7 +156,21 @@ export default function Hero() {
           </div>
         </div>
       </section>
-
+      <div className="text-center text-gray-700 text-lg font-medium space-x-2">
+        <span>Fax</span>
+        <span className="mx-2">|</span>
+        <span>Secure Shredding</span>
+        <span className="mx-2">|</span>
+        <span>Copy + Scan</span>
+        <span className="mx-2">|</span>
+        <span>Mailbox Rental</span>
+        <span className="mx-2">|</span>
+        <span>Cash for Textbooks</span>
+        <span className="mx-2">|</span>
+        <span>Notary Public</span>
+        <span className="mx-2">|</span>
+        <span>Packaging</span>
+      </div>
       <section className="bg-white py-12 md:py-16">
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-8">
           <div className="flex-1 rounded-2xl overflow-hidden shadow-lg border">
@@ -249,25 +263,44 @@ export default function Hero() {
       </section>
 
       <div className="relative py-20 bg-gray-50 overflow-hidden">
-        {/* Heading */}
         <h2 className="text-center text-5xl font-bold text-gray-900 mb-12">
           Track Your Packages
         </h2>
 
-        {/* Subtle background blob */}
         <div className="absolute -bottom-16 -right-16 w-64 h-64 bg-amber-200 rounded-full filter blur-3xl opacity-20"></div>
 
-        {/* Package cards */}
         <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-          {["FedEx", "DHL", "US Postal Service", "UPS"].map((carrier) => (
-            <div
-              key={carrier}
-              className="bg-white p-6 rounded-xl text-center shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer"
+          {[
+            {
+              name: "FedEx",
+              url: "https://www.fedex.com/fedextrack/system-error?trknbr=",
+            },
+            {
+              name: "DHL",
+              url: "https://www.dhl.com/us-en/home/tracking.html?locale=true",
+            },
+            {
+              name: "USPS",
+              url: "https://tools.usps.com/go/TrackConfirmAction_input",
+            },
+            {
+              name: "UPS",
+              url: "https://www.ups.com/track?loc=en_US&WT.svl=PriNav&requester=ST/",
+            },
+          ].map((carrier) => (
+            <a
+              key={carrier.name}
+              href={carrier.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
             >
-              <span className="text-lg font-medium text-gray-800">
-                {carrier}
-              </span>
-            </div>
+              <div className="bg-white p-6 rounded-xl text-center shadow-md hover:shadow-xl hover:scale-105 transition-transform duration-300 ease-in-out cursor-pointer">
+                <span className="text-lg font-medium text-gray-800">
+                  {carrier.name}
+                </span>
+              </div>
+            </a>
           ))}
         </section>
       </div>
