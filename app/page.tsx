@@ -262,7 +262,7 @@ export default function Hero() {
         </div>
       </section>
 
-      <div className="relative py-20 bg-gray-50 overflow-hidden">
+      <div className="relative py-20 bg-gray-200 overflow-hidden">
         <h2 className="text-center text-5xl font-bold text-gray-900 mb-12">
           Track Your Packages
         </h2>
